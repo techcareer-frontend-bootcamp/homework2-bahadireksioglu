@@ -43,6 +43,11 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   overflow: hidden;
+  height: 100vh;
+  background-image: url("/assets/img/background.jpg"); /* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 h1,
@@ -58,10 +63,19 @@ ul {
   list-style: none;
 }
 
+li{
+  float: right;
+  margin-right: 1rem;
+}
+
 a {
   text-decoration: none;
-  color: #fff;
+  color:  var(--white-color);
   cursor: pointer;
+}
+
+li a{
+  color: var(--dark-color);
 }
 
 img {
@@ -72,12 +86,71 @@ img {
 
 /* Navbar - Menu */
 
+header{
+  padding: 8px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+h1 span{
+  color: var(--white-color);
+}
 
 /* Content */
+main{
+  height: 100%;
+}
 
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container-column{
+  flex: 1;
+}
+
+.left{
+  text-align: left;
+  margin-left: 1.6rem;
+}
+
+.right{
+  text-align: right;
+  margin-right: 1.6rem;
+}
+
+.text{
+  width: 100%;
+}
+
+.left .text{
+  font-size: var(--bigger-font-size);
+  color: var(--white-color-text);
+  width: 60%;
+  font-weight: 600;
   
+}
 
+.right .text{
+  display: inline;
+  font-size: 14px;
+  width: auto;
+}
+
+i{
+  font-size: 40px;
+  color: var(--white-color);
+  background-color: var(--first-color);
+  display: inline;
+  border-radius: 50%;
+  border: 5px solid var(--first-color);
+  cursor: pointer;
+}
 /* Social Media */
 
 .social-media {
@@ -91,6 +164,6 @@ img {
 }
   
 /* Responsive */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 
 }
